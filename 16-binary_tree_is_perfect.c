@@ -60,8 +60,8 @@ int binary_tree_is_full_2(const binary_tree_t *tree)
 
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
-	left = binary_tree_is_full(tree->left);
-	right = binary_tree_is_full(tree->right);
+	left = binary_tree_is_full_2(tree->left);
+	right = binary_tree_is_full_2(tree->right);
 
 	if (left && right)
 		return (1);
